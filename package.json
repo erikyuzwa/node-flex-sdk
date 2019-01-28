@@ -1,9 +1,9 @@
 {
   "name": "flex-sdk",
   "description": "A Node.js module to download and \"install\" the latest open source Apache/Adobe Flex SDK.",
-  "version": "4.6.0-0",
+  "version": "4.16.1",
   "flexSdk": {
-    "url": "http://fpdownload.adobe.com/pub/flex/sdk/builds/flex4.6/flex_sdk_4.6.0.23201_mpl.zip"
+    "url": "https://github.com/apache/flex-sdk/archive/apache-flex-sdk-4.16.1.zip"
   },
   "homepage": "https://github.com/JamesMGreene/node-flex-sdk",
   "author": {
@@ -32,24 +32,23 @@
     "mxmlc": "./bin/mxmlc"
   },
   "scripts": {
-    "prepublish": "node prepublish.js; if [ \"$npm_package_config_npm_cmd_ran\" == \"install\" ]; then npm run-script postinstall; fi; npm config delete $npm_package_name:npm_cmd_ran",
+    "prepublish": "node prepublish.js",
     "preinstall": "npm install playerglobal-latest",
-    "install": "npm config set $npm_package_name:npm_cmd_ran install",
     "postinstall": "node install.js",
     "test": "grunt travis --verbose"
   },
   "dependencies": {
-    "playerglobal-latest": "^0.1.6",
-    "mkdirp": "^0.3.5"
+    "mkdirp": "^0.5.1",
+    "playerglobal-latest": "^0.1.7"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt-contrib-jshint": "^2.0.0",
+    "grunt-contrib-nodeunit": "^2.0.0",
     "grunt": "^0.4.4",
-    "download": "^0.1.12",
-    "rimraf": "^2.2.6",
-    "dos2unix": "^1.1.1",
-    "async": "^0.6.2"
+    "download": "^7.1.0",
+    "rimraf": "^2.6.3",
+    "dos2unix": "^1.1.2",
+    "async": "^2.6.1"
   },
   "keywords": [
     "download",

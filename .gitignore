@@ -14,3 +14,8 @@ results
 npm-debug.log
 node_modules
 lib/flex_sdk
+
+package-lock.json
+yarn-lock.json
+
+.idea/
